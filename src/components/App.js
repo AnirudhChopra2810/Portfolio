@@ -2,6 +2,7 @@ import React from 'react';
 import { Menu, Header, Icon, Button, Segment, Grid, Breadcrumb, Container, Popup } from 'semantic-ui-react';
 import Typewriter from 'typewriter-effect';
 import Particles from 'react-particles-js';
+import Home from './Home';
 import { Planet } from 'react-planet';
 
 const sections = [
@@ -19,13 +20,13 @@ const App = () => {
 		<>
 			<Menu secondary color="black">
 				<Menu.Item header>
+					<Icon name="react" />
 					<Typewriter
 						options={{ cursor: '' }}
 						onInit={(typewriter) => {
 							typewriter.typeString(' PORTFOLIO.').pause(1000).start();
 						}}
 					/>
-					<Icon name="react" />
 				</Menu.Item>
 				<Menu.Menu position="right">
 					<Menu.Item>
@@ -36,7 +37,7 @@ const App = () => {
 					</Menu.Item>
 				</Menu.Menu>
 			</Menu>
-
+			<Home />
 			<div className="planet">
 				<Planet
 					hideOrbit
@@ -56,7 +57,7 @@ const App = () => {
 										height: '5rem',
 										width: '5rem',
 										borderRadius: '50%',
-										backgroundColor: '#ff1f5a'
+										backgroundColor: '#171616'
 									}}
 								/>
 							}
