@@ -1,0 +1,47 @@
+body {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	overflow: hidden;
+}
+
+.planet {
+	position: absolute;
+	left: 45%;
+	top: 45%;
+}
+
+.ui.menu .header.item {
+	margin: 0;
+	background: 0 0;
+	box-shadow: none;
+	font-size: 1.5rem;
+	font-family: 'ArquitectaHeavy';
+	color: #171616;
+}
+
+.ui.secondary.menu {
+	background: 0 0;
+
+	margin-left: -0.35714286em;
+	margin-right: -0.35714286em;
+	border-radius: 0;
+	border: 2px solid grey;
+}
+.ui.text.container {
+	font-size: 3rem;
+	color: yellow;
+	position: absolute;
+	top: 20%;
+}
+
+.intro {
+	font-size: 4rem;
+	font-family: FuturaBook;
+	color: yellow;
+}
+
+.ui.breadcrumb a {
+	color: white;
+}
