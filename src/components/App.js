@@ -19,8 +19,8 @@ const App = () => {
 	return (
 		<>
 			<Nav flag={nav} />
-			<CircularMenu />
 			<Home />
+			<CircularMenu />
 		</>
 	);
 };
