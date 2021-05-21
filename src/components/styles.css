@@ -7,11 +7,14 @@ body {
 
 .planet {
 	position: absolute;
-	left: 45%;
-	top: 145%;
+	left: 47%;
+	top: 115%;
+	padding-bottom: 27%;
 }
 
 .home {
 	position: absolute;
-	top: 20%;
+	align-items: center;
+	top: 30%;
+	left: 8%;
 }

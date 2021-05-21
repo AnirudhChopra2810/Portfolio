@@ -1,29 +1,28 @@
 import react from 'react';
 import Typewriter from 'typewriter-effect';
-import { Grid, Image, Sticky, Segment } from 'semantic-ui-react';
-import image from './image3.jpg';
+import { Grid, Image, Sticky, Segment, Container } from 'semantic-ui-react';
+import image from './pic.jpeg';
 
-const Home = (props) => {
+const Home = () => {
 	return (
 		<>
 			<div className="home">
-				<Grid columns="2">
+				<Grid columns="15" stackable textAlign="center">
 					<Grid.Column>
-						<h3 style={{ fontSize: '4.5rem', fontFamily: 'ArquitectaHeavy' }}>
-							<Typewriter
-								onInit={(typewriter) => {
-									typewriter
-										.typeString(
-											'Hello there, my name is Anirudh Chopra and Welcome to my Portfolio website.'
-										)
-										.pause(1000)
-										.start();
-								}}
-							/>
-						</h3>
-					</Grid.Column>
-					<Grid.Column>
-						<Image src={image} />
+						<Container text>
+							<h3 className="typewriter" style={{ fontSize: '4.5rem', fontFamily: 'ArquitectaHeavy' }}>
+								<Typewriter
+									onInit={(typewriter) => {
+										typewriter
+											.typeString(
+												'Hello there, Iam Anirudh Chopra and welcome to my portfolio website.  Scroll down to know more.'
+											)
+											.pause(1000)
+											.start();
+									}}
+								/>
+							</h3>
+						</Container>
 					</Grid.Column>
 				</Grid>
 			</div>
