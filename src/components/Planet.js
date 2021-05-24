@@ -1,34 +1,22 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { Planet } from 'react-planet';
+import SideBar from './Sidebar';
 import { Popup, Button, Icon, Sidebar, Segment, Menu, Grid, Checkbox, Header, Image } from 'semantic-ui-react';
+//import Description from './Modal';
 
-const CircularMenu = () => {
+const CircularMenu = ({ setAbout }) => {
 	const [eventsEnabled, setEventsEnabled] = useState(true);
-	const [open, setOpen] = useState(true);
 	const [visible, setVisible] = React.useState(true);
+	const [open, setOpen] = React.useState(true);
+	const [modalOpen, setModalOpen] = React.useState(false);
+	const [home, setHome] = useState(false);
+	const [skill, setSkill] = useState(false);
+	const [contact, setContact] = useState(false);
+	const history = useHistory();
 
 	return (
 		<>
-			<Grid columns={1}>
-				<Grid.Column>
-					<Sidebar.Pushable as={Segment}>
-						<Sidebar
-							as={Menu}
-							animation="overlay"
-							icon="labeled"
-							inverted
-							onHide={() => setVisible(false)}
-							vertical
-							visible={visible}
-							width="thin"
-						></Sidebar>
-
-						<Sidebar.Pusher>
-							<Segment basic>Hello</Segment>
-						</Sidebar.Pusher>
-					</Sidebar.Pushable>
-				</Grid.Column>
-			</Grid>
 			<div className="planet">
 				<Planet
 					hideOrbit
@@ -68,7 +56,7 @@ const CircularMenu = () => {
 									backgroundColor: 'white'
 								}}
 								onClick={() => {
-									setVisible(true);
+									setAbout(false);
 								}}
 							/>
 						}
@@ -85,6 +73,9 @@ const CircularMenu = () => {
 									color: 'black',
 									backgroundColor: 'white'
 								}}
+								onClick={() => {
+									setAbout(true);
+								}}
 							/>
 						}
 					/>
@@ -99,6 +90,9 @@ const CircularMenu = () => {
 									color: 'black',
 									backgroundColor: 'white'
 								}}
+								onClick={() => {
+									setModalOpen(true);
+								}}
 							/>
 						}
 					/>
@@ -112,6 +106,9 @@ const CircularMenu = () => {
 								style={{
 									color: 'black',
 									backgroundColor: 'white'
+								}}
+								onClick={() => {
+									setModalOpen(true);
 								}}
 							/>
 						}

@@ -1,11 +1,23 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Menu, Icon } from 'semantic-ui-react';
 import Typewriter from 'typewriter-effect';
 
-const Nav = ({ flag }) => {
+const Nav = () => {
 	const style1 = {
 		backgroundColor: 'black'
 	};
+
+	const [nav, setNav] = useState(false);
+
+	const handleScroll = () => {
+		if (window.scrollY >= 60) {
+			setNav(true);
+		} else {
+			setNav(false);
+		}
+	};
+
+	window.addEventListener('scroll', handleScroll);
 
 	const style2 = {
 		background: '0 0',
@@ -17,11 +29,11 @@ const Nav = ({ flag }) => {
 
 	return (
 		<div>
-			<Menu fixed="top" secondary style={flag ? style1 : style2}>
+			<Menu fixed="top" secondary style={nav ? style1 : style2}>
 				<Menu.Item
 					header
 					style={
-						flag
+						nav
 							? {
 									margin: '0',
 									background: '0 0',

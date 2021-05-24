@@ -2,10 +2,12 @@ import react from 'react';
 import Typewriter from 'typewriter-effect';
 import { Grid, Image, Sticky, Segment, Container } from 'semantic-ui-react';
 import image from './pic.jpeg';
+import Nav from './Nav';
 
 const Home = () => {
 	return (
 		<>
+			<Nav />
 			<div className="home">
 				<Grid columns="15" stackable textAlign="center">
 					<Grid.Column>

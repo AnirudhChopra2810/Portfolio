@@ -11,7 +11,7 @@ const SideBar = ({ visible, setVisible }) => {
 				inverted
 				onHide={() => setVisible(false)}
 				vertical
-				visible={visible}
+				visible={true}
 				width="thin"
 			>
 				<Menu.Item as="a">

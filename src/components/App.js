@@ -2,28 +2,20 @@ import React, { useState, createRef } from 'react';
 import Particles from 'react-particles-js';
 import Nav from './Nav';
 import Home from './Home';
+import About from './About';
 import CircularMenu from './Planet';
 import SideBar from './Sidebar';
 
 const App = () => {
-	const [nav, setNav] = useState(false);
+	const [about, setAbout] = useState(false);
 
-	const handleScroll = () => {
-		if (window.scrollY >= 60) {
-			setNav(true);
-		} else {
-			setNav(false);
-		}
-	};
-
-	window.addEventListener('scroll', handleScroll);
 	return (
 		<>
-			<Nav flag={nav} />
 			<Home />
-			<CircularMenu />
-			{/* <SideBar visible={visible} setVisible={setVisible} /> */}
-
+			{/* {about === true && <About />} */}
+			{/* <CircularMenu about={about} setAbout={setAbout} />
+			<SideBar visible={visible} setVisible={setVisible} /> */}
+			{/* 
 			<Particles
 				style={{ color: '#111210' }}
 				params={{
@@ -51,7 +43,7 @@ const App = () => {
 					}
 				}}
 				height="165vh"
-			/>
+			/> */}
 		</>
 	);
 };
